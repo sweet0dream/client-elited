@@ -1,0 +1,11 @@
+{% extends 'elited/base.html.twig' %}
+{% set title = item.type.value ~ ' ' ~ item.info.name.value ~ ', ID: ' ~ item.id %}
+{% set description = item.dopinfo %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+
+{% block body %}
+{{ dump(item) }}
+{{ dump(reviews) }}
+{% endblock %}
